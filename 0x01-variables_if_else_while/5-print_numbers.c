@@ -1,21 +1,18 @@
 #include <stdio.h>
 
 /**
- * main - Entry point of the program
+ * main - Prints numbers from 0 to 9.
  *
- * Return: 0 on successful execution
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int i;
+	int i;
 
-    /* Loop through the single-digit numbers */
-    for (i = 0; i < 10; i++)
-    {
-        printf("%d", i);
-    }
-
-    printf("\n");
-
-    return (0);
+	for (i = 0; i < 10; i++)
+	{
+		printf("%d", i);
+	}
+	putchar('\n');
+	return (0);
 }

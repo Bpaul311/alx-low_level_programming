@@ -10,10 +10,10 @@ int main(void)
 	if (n<0){
 		printf("%d is negative\n",n);
 	}
-	if (n>0){
+	else if (n>0){
                 printf("%d is positive\n",n);
         }
-	if (n=0){
+	else {
                 printf("%d is 0\n",n);
         }
 	/* your code goes there */

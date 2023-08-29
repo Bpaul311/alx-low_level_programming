@@ -7,6 +7,7 @@
  *
  * Description: singly linked list node structure
  */
+#include <stddef.h>
 typedef struct listint_s
 {
 	/* Indentation here is achieved using tabs */

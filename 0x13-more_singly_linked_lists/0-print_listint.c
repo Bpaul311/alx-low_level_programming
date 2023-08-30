@@ -11,9 +11,6 @@ size_t print_listint(const listint_t *h)
 {
 	size_t count = 0; /* initialises a variable to count the nodes */
 	const listint_t *current = h; /* initialises a pointer to transverse */
-
-	if (current == NULL)
-		return (0);
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);

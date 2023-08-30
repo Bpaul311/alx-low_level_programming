@@ -13,10 +13,7 @@ size_t print_listint(const listint_t *h)
 	const listint_t *current = h; /* initialises a pointer to transverse */
 
 	if (current == NULL)
-	{
 		return (0);
-	}
-
 	while (current != NULL)
 	{
 		printf("%d\n", current->n);

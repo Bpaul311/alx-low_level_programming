@@ -16,6 +16,9 @@ char *argstostr(int ac, char **av)
 	int len = 0;
 	int i = 0;
 
+	if (ac == 0 || av == NULL)
+		return (NULL);
+
 	/* Calculate the total length */
 	for (i = 0; i < ac; i++)
 	{

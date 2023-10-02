@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -6,7 +7,7 @@
  * @height: The height (number of rows) of the grid.
  *
  * Description:
- * The alloc_grid function dynamically allocates memory for a 2-dimensionalgrid
+ * The alloc_grid function dynamically allocates memory for a2-dimensional grid
  * of integers with the specified 'width' and 'height'.Each element of the grid
  * is initialized to 0. If 'width' or 'height' is 0 or negative, the function
  * returns NULL. If memory allocation fails, it also returns NULL.
@@ -15,7 +16,7 @@
  * On success, alloc_grid returns a pointer to the allocated grid of integers.
  * Each element of the grid is initialized to 0. The grid can be accessed as a
  * 2-dimensional array. When no longer needed, the allocated memory should be
- * freed using the free function. If 'width' or 'height' is 0 or negative,or if
+ * freed using the free_grid function. If 'width' or 'height' is 0 or negative
  * memory allocation fails, it returns NULL.
  */
 int **alloc_grid(int width, int height)
@@ -39,7 +40,13 @@ int **alloc_grid(int width, int height)
 		a[i] = (int *)malloc(sizeof(int) * width);
 
 		if (a[i] == NULL)
+		{
+			/* Free the allocated memory on failure */
+			for (j = 0; j < i; j++)
+				free(a[j]);
+			free(a);
 			return (NULL);
+		}
 
 		for (j = 0; j < width; j++)
 			a[i][j] = 0;

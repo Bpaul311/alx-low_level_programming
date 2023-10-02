@@ -1,5 +1,7 @@
 #include <stdlib.h>
+#include <string.h>
 #include "main.h"
+
 /**
  * argstostr - Concatenates all the arguments of your program.
  * @ac: The argument count.
@@ -12,9 +14,10 @@ char *argstostr(int ac, char **av)
 	char *ptr;
 	int counter = 0;
 	int len = 0;
+	int i = 0;
 
 	/* Calculate the total length */
-	for (int i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		len += strlen(av[i]) + 1; /* +1 for the newline character */
 	}
@@ -25,7 +28,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 
 	/* Concatenation */
-	for (int i = 0; i < ac; i++)
+	for (i = 0; i < ac; i++)
 	{
 		strcpy(ptr + counter, av[i]);
 		counter += strlen(av[i]);

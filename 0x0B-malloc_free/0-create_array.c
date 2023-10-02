@@ -1,11 +1,14 @@
 #include"main.h"
 #include<stdlib.h>
 /*
- * _putchar - Writes a character to the standard output.
+ * create_array - Creates an array of characters initialized with a specific character.
  *
- * @c: The character to be written.
+ * @size: The size of the array to create.
+ * @c: The character to initialize the array with.
  *
- * This function writes the character 'c' to the standard output.
+ * This function dynamically allocates memory for an array of characters of the given size
+ * and initializes each element with the specified character 'c'. Returns a pointer to the
+ * created array or NULL if memory allocation fails or if size is 0.
  */
 char *create_array(unsigned int size, char c)
 {

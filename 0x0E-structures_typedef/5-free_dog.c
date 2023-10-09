@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "dog.h"
 /**
- * printdog - Display dog information.
+ * free_dog - Remove Dog information.
  *
  * @d: Pointer to the dog's data.
  */

@@ -1,14 +1,11 @@
 #include "3-calc.h"
 #include <stdlib.h>
-
 /**
- * get_op_func - Returns a function pointer for an operator.
+ * get_op_func - Retrieves the operation function associated to the operator
  *
- * @s: The operator.
+ * @s: The operator passed as an argument.
  *
- * Description:
- * This function returns a pointer to the function that corresponds to operator
- * If the operator is not recognized, it returns NULL.
+ * Return: A pointer to the corresponding operation function.
  */
 int (*get_op_func(char *s))(int, int)
 {

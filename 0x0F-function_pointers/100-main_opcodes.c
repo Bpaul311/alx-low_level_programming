@@ -27,6 +27,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (2);
 	}
+	opcode = (unsigned char *) main;
 	for (i = 0; i < num_bytes; i++)
 	{
 		if (i == num_bytes - 1)

@@ -14,7 +14,7 @@
 int main(int argc, char *argv[])
 {
 	int num_bytes, i;
-	unsigned char opcode;
+	unsigned char *opcode;
 
 	if (argc != 2)
 	{
@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
 	{
 		if (i == num_bytes - 1)
 		{
-			printf("%02hhx\n", arr[i]);
+			printf("%02hhx\n", opcode[i]);
 			break;
 		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx ", opcode[i]);
 	}
 	return (0);
 }

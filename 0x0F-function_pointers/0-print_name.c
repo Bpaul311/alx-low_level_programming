@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include "function_pointers.h"
-/*
- * Function to print a name using a provided printing function.
+/**
+ * print_name - Print a name using a provided printing function.
  *
- * Parameters:
- * print_name: prints the nam using a pointer as argument.
- *   name: A pointer to a character string (the name to be printed).
- *   f: A function pointer to a function that takes a char* as an argument.
+ * @name: A pointer to a character string (the name to be printed).
+ * @f: A function pointer to a function that takes a char* as an argument.
  *      This function is responsible for printing the name.
  *
- * Return Type: None (void)
+ * Return: Nothing (void)
  */
 void print_name(char *name, void (*f)(char *))
 {

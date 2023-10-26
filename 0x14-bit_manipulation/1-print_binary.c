@@ -5,13 +5,29 @@
  *
  * Return: none
  */
-void print_binary(unsigned long int n) {
-  /* Iterate through the bits of n, starting with the most significant bit */
-  for (unsigned int i = 31; i >= 0; i--) {
-    if ((n >> i) & 1) {
-      _putchar('1');
-    } else {
-      _putchar('0');
-    }
-  }
+void print_binary(unsigned long int n)
+{
+	unsigned long int i;
+	int flag = 0;
+	
+	if (n == 0)
+	{
+		_putchar('0');
+		return;
+	}
+	i = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	while (i != 0)
+	{
+		if ((n & i) != 0)
+		{
+			_putchar('1');
+			flag = 1;
+		}
+		else if (flag)
+		{
+			_putchar('0');
+		}
+
+		i >>= 1;
+	}
 }
